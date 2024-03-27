@@ -1,0 +1,279 @@
+main .payment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 900px;
+    height: fit-content;
+    margin-left: 700px;
+    padding-top: 200px;
+
+    transition: all .5s ease .2s;
+}
+
+main .payment._hidden{
+    opacity: 0;
+}
+
+main .payment h4{
+    color: white;
+    font-family: "Montserrat-Medium", sans-serif;
+    font-size: 26px;
+    margin: 0;
+}
+
+main .payment .payment_block{
+    width: 100%;
+    padding: 20px 25px 30px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: rgb(27, 27, 27);
+}
+
+
+
+
+main .payment .payment_block .progress_bar_block .progress_bar{
+    width: 100%;
+    height: 10px;
+    margin-bottom: 20px;
+}
+
+main .payment .payment_block .progress_bar_block p{
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+main .payment .payment_block .progress_bar_block p span{
+    position: absolute;
+    right: 40px;
+}
+
+
+
+
+main .payment .payment_block .payment_form{
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+
+    transition: all .3s ease;
+}
+
+main .payment .payment_block .payment_form._hidden{
+    opacity: 0;
+}
+
+
+
+main .payment .payment_block .payment_form .payment_form__qr_code{
+    width: 150px;
+    min-width: 150px;
+    height: 150px;
+    border: 3px solid rgb(229, 135, 34);
+    border-radius: 5px;
+    position: relative;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+main .payment .payment_block .payment_form .payment_form__qr_code img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+}
+
+
+
+main .payment .payment_block .payment_form .payment_form__left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin-right: 30px;
+}
+
+main .payment .payment_block .payment_form .payment_form__left .form{
+    display: flex;
+    justify-content: space-between;
+}
+
+main .payment .payment_block .payment_form.cryptocurrency .payment_form__left .form{
+    flex-direction: column;
+    gap: 10px;
+}
+
+main .payment .payment_block .payment_form .payment_form__left .form .block_input{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+main .payment .payment_block .payment_form.cryptocurrency .payment_form__left .form .block_input{
+    margin-right: 20px;
+}
+
+main .payment .payment_block .payment_form .payment_form__left .form .block_input h5{
+    color: white;
+    font-family: "Montserrat-Medium", sans-serif;
+    font-size: 23px;
+    margin: 0;
+}
+
+main .payment .payment_block .payment_form .payment_form__left .form .block_input .clipboard{
+    display: inline-flex;
+    align-items: center;
+    width: 190px;
+    min-height: 30px;
+    color: white;
+    font-family: "Montserrat-Medium", sans-serif;
+    font-size: 22px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    background-color: rgb(37, 37, 37);
+    margin: 0;
+    cursor: pointer;
+}
+
+main .payment .payment_block .payment_form .payment_form__left .form .block_input:nth-child(3) .clipboard{
+    width: 170px;
+}
+
+main .payment .payment_block .payment_form.cryptocurrency .payment_form__left .form .block_input .clipboard{
+    width: calc(100% - 20px);
+}
+
+
+main .payment .payment_block .payment_form .payment_form__left .button_pay{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+main .payment .payment_block .payment_form .payment_form__left .button_pay a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 45px;
+    color: white;
+    font-family: "Montserrat-Medium", sans-serif;
+    font-size: 27px;
+    text-decoration: none;
+    border-radius: 8px;
+    background-color: rgb(229, 135, 33);
+    margin-left: 20px;
+
+    transition: all .3s ease;
+}
+
+main .payment .payment_block .payment_form .payment_form__left .button_pay a:hover{
+    background-color: rgb(255, 149, 35);
+}
+
+
+
+main .payment .payment_block .payment_form .payment_form__right{
+    display: flex;
+    justify-content: left;
+    width: 210px;
+    min-width: 210px;
+}
+
+main .payment .payment_block .payment_form .payment_form__right .logo{
+    width: 195px;
+}
+
+main .payment .payment_block .payment_form .payment_form__right img{
+    width: 100%;
+}
+
+
+
+
+main .payment .payment_block .block_info{
+    position: relative;
+    margin: 0 0 20px 280px;
+
+    transition: all .5s ease .2s;
+}
+
+main .payment .payment_block .block_info._hidden{
+    opacity: 0;
+}
+
+main .payment .payment_block .block_info .logo{
+    width: 195px;
+}
+
+main .payment .payment_block .block_info img{
+    width: 100%;
+    height: 100%;
+}
+
+main .payment .payment_block .block_info .info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 170px;
+    position: absolute;
+    right: 160px;
+    top: 0px;
+    background-image: url("../img/payment/info_bg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 3;
+}
+
+main .payment .payment_block .block_info .info p{
+    display: inline-flex;
+    align-items: center;
+    width: 180px;
+    height: 70px;
+    color: white;
+    font-family: "Anive-Ace", sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 30px;
+    right: 27px;
+    transform: rotate(-5deg);
+}
+
+
+
+
+main .payment .payment_block .warning{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main .payment .payment_block .warning p{
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    font-family: "Montserrat-Medium", sans-serif;
+    font-size: 20px;
+    position: relative;
+    margin: 0;
+    padding-left: 45px;
+}
+
+main .payment .payment_block .warning p span{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    left: 0;
+    background-image: url("../img/icons/icon_warning.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}

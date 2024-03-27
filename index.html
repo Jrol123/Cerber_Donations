@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cerber Donations</title>
+
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/select_payment.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+
+    <link rel="stylesheet" href="/css/media/index_media.css">
+    <link rel="stylesheet" href="/css/media/select_payment_media.css">
+</head>
+<body>
+    <main>
+        <div class="select_payment">
+            <div class="list_payment">
+                <h4>Выберите способ оплаты:</h4>
+                
+                <ul>
+                    <li data-payment="bank_card">
+                        <img src="/img/select_payment/payments/payment_1.png" alt="">
+                        <span>Картой</span>
+                    </li>
+
+                    <li data-payment="btc">
+                        <img src="/img/select_payment/payments/payment_2.png" alt="">
+                        <span>BTC</span>
+                    </li>
+
+                    <li data-payment="ltc">
+                        <img src="/img/select_payment/payments/payment_3.png" alt="">
+                        <span>LTC</span>
+                    </li>
+
+                    <li data-payment="eth">
+                        <img src="/img/select_payment/payments/payment_4.png" alt="">
+                        <span>ETH</span>
+                    </li>
+
+                    <li data-payment="usdt">
+                        <img src="/img/select_payment/payments/payment_5.png" alt="">
+                        <span>USDT</span>
+                    </li>
+
+                    <li data-payment="spb">
+                        <img src="/img/select_payment/payments/payment_6.png" alt="">
+                        <span>СПБ</span>
+                    </li>
+                    
+                    <li data-payment="xmr">
+                        <img src="/img/select_payment/payments/payment_7.png" alt="">
+                        <span>XMR</span>
+                    </li>
+
+                    <li data-payment="credit_card">
+                        <img src="/img/select_payment/payments/payment_8.png" alt="">
+                        <span>КРЕДИТКОЙ</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="hidden_block none">
+                <div class="additional_text">
+                    <div class="select">
+                        <select name="" id="">
+                            <option value="Текст" selected>Текст</option>
+                            <option value="Текст1">1500</option>
+                            <option value="Текст2">0.00054</option>
+                            <option value="Текст3">10021</option>
+                            <option value="Текст4">2000</option>
+                        </select>
+                    </div>
+    
+                    <div class="username">
+                        <input type="text" name="" id="" placeholder="Текст">
+                    </div>
+                </div>
+                
+                <div class="donation">
+                    <div class="donation__amount">
+                        <div class="input_amount btc">
+                            <p class="input" id="input-amount"></p>
+                        </div>
+                    </div>
+    
+                    <div class="button_pay">
+                        <a href="" id="button-pay">Оплатить</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input_range_donation">
+                <h4>На улучшение канала</h4>
+
+                <div class="input" id="input-range-donation" data-value="5000" data-min="0" data-max="25000">
+                    <div class="input__completion"></div>
+                    <p>
+                        Собрано <span id="input-range-text-value"></span> из 
+                        <span id="input-range-text-max"></span>!
+                    </p>
+                </div>
+            </div>
+
+            <div class="table_donation">
+                <h4>В этом месяце мы собрали пожертвований</h4>
+
+                <table>
+                    <tr>
+                        <th>Общая сумма</th>
+                        <th>Валюта</th>
+                        <th>Платежей</th>
+                        <th>Топ помощи</th>
+                    </tr>
+    
+                    <tr>
+                        <td>88 000</td>
+                        <td>Рубли</td>
+                        <td>25</td>
+                        <td>@antidomonvip</td>
+                    </tr>
+    
+                    <tr>
+                        <td>4.58</td>
+                        <td>Monero</td>
+                        <td>25</td>
+                        <td>@antidomonvip</td>
+                    </tr>
+    
+                    <tr>
+                        <td>4.58</td>
+                        <td>Bitcoin</td>
+                        <td>25</td>
+                        <td>@antidomonvip</td>
+                    </tr>
+    
+                    <tr>
+                        <td>4.58</td>
+                        <td>Litecoin</td>
+                        <td>25</td>
+                        <td>@antidomonvip</td>
+                    </tr>
+    
+                    <tr>
+                        <td>4.58</td>
+                        <td>Tether</td>
+                        <td>25</td>
+                        <td>@antidomonvip</td>
+                    </tr>
+    
+                    <tr>
+                        <td>4.58</td>
+                        <td>Ethereum</td>
+                        <td>25</td>
+                        <td>@antidomonvip</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="substrates">
+            <div class="substrate">
+                <p>Пожертвования  и платежи  в CERBERUS</p>
+            </div>
+
+            <div class="substrate">
+                <p>Каждый ваш платеж помогает развитию проектов</p>
+            </div>
+        </div>
+
+        <div class="patterns">
+            <div class="pattern_1">
+                <img src="/img/patterns/pattern_1.png" alt="">
+            </div>
+
+            <div class="pattern_2">
+                <img src="/img/patterns/pattern_2.png" alt="">
+                <img src="/img/patterns/pattern_2_active.png" alt="">
+                <div class="href_chat">
+                    <a href="https://web.telegram.org/" target="_blank">Заходи в наш чат</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="/js/select_payment.js"></script>
+    <script src="/js/input_range_donation.js"></script>
+    <script src="/js/href_chat_mobile.js"></script>
+</body>
+</html>

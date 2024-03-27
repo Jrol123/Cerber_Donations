@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Montserrat-Medium";
+    src: url(../font_family/Montserrat/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat-Light";
+    src: url(../font_family/Montserrat/Montserrat-Light.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat-SemiBold";
+    src: url(../font_family/Montserrat/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "Adigiana";
+    src: url(../font_family/Adigiana/Adigiana.ttf);
+}
+
+@font-face {
+    font-family: "Anive-Ace";
+    src: url(../font_family/Anive-Ace/Anive-Ace.ttf);
+}
+
+@font-face {
+    font-family: "LCChalk";
+    src: url(../font_family/LC-Chalk/LC-Chalk.ttf);
+}

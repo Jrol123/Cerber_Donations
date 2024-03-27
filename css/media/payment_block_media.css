@@ -1,0 +1,310 @@
+@media only screen and (max-width : 1800px){
+    main .payment{
+        margin-left: 650px;
+    }
+}
+
+@media only screen and (max-width : 1600px){
+    main .payment{
+        width: 750px;
+        margin-left: 600px;
+    }
+
+
+    main .payment h4{
+        font-size: 21px;
+    }
+
+
+    main .payment .payment_block .progress_bar_block .progress_bar{
+        height: 8px;
+    }
+
+
+    main .payment .payment_block .payment_form .payment_form__qr_code{
+        width: 120px;
+        min-width: 120px;
+        height: 120px;
+        border: 2px solid rgb(229, 135, 34);
+    }    
+
+
+    main .payment .payment_block .payment_form .payment_form__left .form .block_input h5{
+        color: white;
+        font-family: "Montserrat-Medium", sans-serif;
+        font-size: 18px;
+    }
+
+    main .payment .payment_block .payment_form .payment_form__left .form .block_input .clipboard{
+        width: 150px;
+        min-height: 17px;
+        font-size: 16px;
+    }
+    
+    main .payment .payment_block .payment_form .payment_form__left .form .block_input:nth-child(3) .clipboard{
+        width: 130px;
+    }
+
+
+    main .payment .payment_block .payment_form .payment_form__left .button_pay a{
+        width: 160px;
+        height: 35px;
+        font-size: 20px;
+    }
+
+
+    main .payment .payment_block .payment_form .payment_form__right{
+        width: 160px;
+        min-width: 160px;
+    }
+
+    main .payment .payment_block .payment_form .payment_form__right .logo{
+        width: 145px;
+    }
+
+
+    main .payment .payment_block .block_info{
+        margin: 0 0 20px 200px;
+    }
+
+    main .payment .payment_block .block_info .logo{
+        width: 145px;
+    }
+
+    main .payment .payment_block .block_info .info{
+        width: 230px;
+        height: 130px;
+        right: 180px;
+    }
+
+    main .payment .payment_block .block_info .info p{
+        width: 160px;
+        height: 70px;
+        font-size: 14px;
+        top: 20px;
+        right: 20px;
+    }
+
+
+    main .payment .payment_block .warning p{
+        font-size: 16px;
+    }
+    
+    main .payment .payment_block .warning p span{
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media only screen and (max-width : 1500px){
+    main .payment{
+        margin-left: 550px;
+    }
+}
+
+@media only screen and (max-width : 1400px){
+    main .payment{
+        margin-left: 500px;
+    }
+}
+
+@media only screen and (max-width : 1300px){
+    main .payment{
+        margin-left: 400px;
+    }
+}
+
+@media only screen and (max-width : 1100px){
+    main .payment{
+        width: 750px;
+        margin-left: 0;
+        padding-top: 300px;
+    }
+}
+
+@media only screen and (max-width : 900px){
+    main .payment{
+        width: 600px;
+    }  
+
+
+    main .payment h4 {
+        text-align: center;
+    }
+
+
+    main .payment .payment_block .payment_form .payment_form__left {
+        margin-right: 0px;
+    }
+
+    main .payment .payment_block .payment_form .payment_form__right {
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 720px){
+    main{
+        min-height: 1300px;
+    }
+
+    main .payment{
+        width: calc(100% - 40px);
+    }
+
+    main .payment .payment_block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(100% - 60px);
+    }
+
+
+    main .payment .progress_bar_block .progress_bar{
+        width: 100% !important;
+    }
+
+    main .payment .payment_block .progress_bar_block p{
+        font-size: 18px;
+        text-align: left;
+    }
+
+    main .payment .payment_block .progress_bar_block p span {
+        right: 0px;
+    }
+
+
+    main .payment .payment_block .payment_form.cryptocurrency{
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+
+    main .payment .payment_block .payment_form .payment_form__qr_code{
+        width: 135px;
+        min-width: 135px;
+        height: 135px;
+        margin-right: 0;
+    }
+
+
+    main .payment .payment_block .payment_form .payment_form__left .form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+
+    main .payment .payment_block .payment_form .payment_form__left .form .block_input{
+        align-items: center;
+    }
+
+    main .payment .payment_block .payment_form.cryptocurrency .payment_form__left .form .block_input {
+        margin-right: 0;
+    }
+
+    main .payment .payment_block .payment_form .payment_form__left .form .block_input .clipboard,
+    main .payment .payment_block .payment_form.cryptocurrency .payment_form__left .form .block_input .clipboard{
+        width: calc(100% - 160px);
+    }
+
+    main .payment .payment_block .payment_form .payment_form__left .form .block_input:nth-child(3) .clipboard{
+        width: calc(100% - 160px);
+    }
+
+
+
+    main .payment .payment_block .payment_form .payment_form__left .button_pay a{
+        border-radius: 50px;
+        margin-left: 0;
+    }
+
+
+    main .payment .payment_block .warning{
+        width: calc(100% - 80px);
+        margin-top: 20px;
+    }
+
+    main .payment .payment_block .warning p{
+        text-align: center;
+    }
+
+
+    main .substrates .substrate:nth-child(1) p {
+        width: 280px;
+        font-size: 21px;
+    }
+
+    main .substrates .substrate:nth-child(1) p {
+        top: 60px;
+    }
+
+    main .substrates .substrate:nth-child(1) p.cryptocurrency{
+        top: 50px;
+    }
+
+    main .substrates .substrate:nth-child(1) p.bank_card {
+        top: 48px;
+    }
+
+    main .substrates .substrate:nth-child(1) p.credit_card {
+        top: 35px;
+    }
+}
+
+@media only screen and (max-width : 500px){
+    main .payment .payment_block .progress_bar_block {
+        align-items: start;
+    }
+
+    main .payment .payment_block .progress_bar_block p{
+        display: inline-flex;
+        align-items: center;
+        width: calc(100% - 40px);
+    }
+
+    main .payment .payment_block .progress_bar_block p span {
+        right: -40px;
+    }
+
+
+    main .payment .payment_block .payment_form .payment_form__left .form .block_input .clipboard,
+    main .payment .payment_block .payment_form.cryptocurrency .payment_form__left .form .block_input .clipboard{
+        width: calc(100% - 60px);
+    }
+
+    main .payment .payment_block .payment_form .payment_form__left .form .block_input:nth-child(3) .clipboard{
+        width: calc(100% - 60px);
+    }
+
+
+    main .payment .payment_block .warning{
+        width: calc(100% - 20px);
+    }
+}
+
+@media only screen and (max-width : 400px){
+    main .payment h4 {
+        font-size: 19px;
+    }
+
+
+    main .payment .payment_block .progress_bar_block p {
+        font-size: 16px;
+    }
+
+
+    main .payment .payment_block .payment_form .payment_form__left .form .block_input h5 {
+        font-size: 16px;
+    }
+
+
+    main .payment .payment_block .warning{
+        width: 100%;
+    }
+
+    main .payment .payment_block .warning p{
+        font-size: 15px;
+    }
+}

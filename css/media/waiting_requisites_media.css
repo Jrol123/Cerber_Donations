@@ -1,0 +1,145 @@
+@media only screen and (max-width : 1900px){
+    main .waiting_requisites{
+        margin-left: 650px;
+    }
+}
+
+@media only screen and (max-width : 1800px){
+    main .waiting_requisites{
+        margin-left: 600px;
+    }
+}
+
+@media only screen and (max-width : 1600px){
+    main .waiting_requisites{
+        width: 700px;
+        margin-left: 600px;
+    }
+    
+  
+    main .waiting_requisites .waiting_requisites__logo{
+        width: 300px;
+        height: 230px;
+    }
+
+
+    main .waiting_requisites .waiting_requisites__info{
+        height: 50px;
+    }
+
+    main .waiting_requisites .waiting_requisites__info p{
+        font-size: 19px;
+    }
+
+
+    main .substrates .substrate:nth-child(1){
+        width: 420px;
+        height: 270px;
+    }
+    
+    main .substrates .substrate:nth-child(1) p{
+        width: 320px;
+        font-size: 24px;
+        top: 65px;
+    }
+}
+
+@media only screen and (max-width : 1600px){
+    main .waiting_requisites{
+        margin-left: 500px;
+    }
+}
+
+@media only screen and (max-width : 1300px){
+    main .waiting_requisites{
+        margin-left: 400px;
+    }
+
+
+    main .substrates .substrate:nth-child(1){
+        width: 350px;
+        height: 220px;
+    }
+    
+    main .substrates .substrate:nth-child(1) p{
+        width: 280px;
+        font-size: 19px;
+        top: 70px;
+        left: 5px;
+    }
+
+    main .substrates .substrate:nth-child(1) p.credit_card{
+        top: 60px;
+    }
+
+    main .substrates .substrate:nth-child(1) p.cryptocurrency{
+        top: 70px;
+    }
+
+    main .substrates .substrate:nth-child(1) p.bank_card{
+        top: 72px;
+    }
+}
+
+@media only screen and (max-width : 1100px){
+    main{
+        display: flex;
+        justify-content: center;
+    }
+
+
+    main .waiting_requisites .waiting_requisites__logo {
+        width: 240px;
+        height: 170px;
+    }
+
+
+    main .waiting_requisites{
+        width: 900px;
+        padding-top: 300px;
+        margin-left: 0;
+    }
+
+    main .waiting_requisites .waiting_requisites__info {
+        height: fit-content;
+        width: calc(100% - 80px);
+        padding: 15px 0;
+    }
+
+    main .waiting_requisites .waiting_requisites__info p{
+        text-align: center;
+    }
+
+
+    main .substrates .substrate:nth-child(1){
+        position: absolute;
+        top: 20px;
+    }
+}
+
+@media only screen and (max-width : 720px){
+    main{
+        min-height: 1150px;
+    }
+
+    .progress_bar_block .progress_bar {
+        width: calc(100% - 40px) !important;
+    }
+
+    main .waiting_requisites .waiting_requisites__info {
+        width: calc(100% - 40px);
+    }
+}
+
+
+@media only screen and (max-height: 800px) and (min-width: 1600px){
+    main .substrates .substrate:nth-child(1){
+        top: 80px;
+    }
+}
+
+@media only screen and (max-height: 700px) and (max-width: 1600px){
+    main .substrates .substrate:nth-child(1){
+        top: 40px;
+    }
+}
