@@ -71,7 +71,7 @@ function hiddenBlockActive(){
 
     if(hiddenBlock.querySelector(".additional_text")){
         select.querySelector("select").addEventListener("click", (e) => {
-            console.log(e);
+            select.querySelector("select").value = "1";
         });
         
         select.addEventListener("click", (e) => {
