@@ -70,8 +70,11 @@ function hiddenBlockActive(){
     hiddenBlockFunActive = true;
 
     if(hiddenBlock.querySelector(".additional_text")){
-        select.addEventListener("touchstart", (e) => {
-            console.log("1");
+        select.querySelector("select").addEventListener("click", (e) => {
+            console.log(e);
+        });
+        
+        select.addEventListener("click", (e) => {
             let options = select.querySelectorAll("select option:not([selected])");
         
             if(!select.querySelector("select").classList.contains("_active")){
