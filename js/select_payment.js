@@ -211,7 +211,7 @@ function buttonPayActive(){
             localStorage.setItem('payment_amount', paymentAmount);
             localStorage.setItem('payment_method', paymentMethod);
     
-            window.location.href = "/templates/payment.html";
+            window.location.href = "templates/payment.html";
         }
     });
 }
