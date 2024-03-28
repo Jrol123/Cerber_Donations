@@ -30,10 +30,13 @@
     }
 
 
-    main .select_payment .additional_text .select select{
+    main .select_payment .additional_text .select{
         height: 40px;
-        font-size: 16px;
         padding-left: 15px;
+    }
+
+    main .select_payment .additional_text .select .select__head{
+        font-size: 16px;
     }
 
     main .select_payment .additional_text input{
@@ -164,6 +167,14 @@
 
 
 
+    main .select_payment .additional_text .select .select__list .select__item{
+        border-bottom: 1px solid white;
+    }
+
+    main .select_payment .additional_text .select .select__list .select__item:last-child{
+        border-bottom: none;
+    }
+
     main .select_payment .input_range_donation .input {
         width: 100%;
         height: 40px;
@@ -195,6 +206,53 @@
 @media only screen and (max-width : 720px){
     main{
         min-height: 1100px;
+    }
+}
+
+@media only screen and (max-width : 400px){
+    main{
+        overflow-x: hidden;
+    }
+
+
+    main .select_payment {
+        width: 100%;
+    }
+
+
+    main .select_payment .list_payment ul {
+        width: 320px;
+        margin: 0 auto;
+    }
+
+    main .select_payment .list_payment ul li {
+        width: 146px;
+        height: 60px;
+    }
+
+    main .select_payment .list_payment ul li img {
+        width: 47px;
+        height: 35px;
+        margin-left: 5px;
+    }
+
+    main .select_payment .list_payment ul li:last-child span {
+        font-size: 14px;
+    }
+
+
+    main .hidden_block {
+        width: 320px;
+        margin: 0 auto;
+    }
+
+    main .select_payment .donation .donation__amount .input_amount .input {
+        width: 147px;
+    }
+
+
+    main .select_payment .input_range_donation .input {
+        width: calc(100% - 40px);
     }
 }
 
