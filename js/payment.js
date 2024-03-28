@@ -167,7 +167,7 @@ let paymentCreditCardBlock = `
 let paymentInfoBlock = `
     <div class="block_info _hidden">
         <div class="logo">
-            <img src="img/payment/p_logo.gif" alt="">
+            <img src="../img/payment/p_logo.gif" alt="">
         </div>
 
         <div class="info">
