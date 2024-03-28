@@ -11,6 +11,8 @@ function clipboardsFunClickActive(){
 
             document.execCommand('copy');
             window.getSelection().removeAllRanges();
+
+            popupSavedCopyCreate();
         });
     });
 };

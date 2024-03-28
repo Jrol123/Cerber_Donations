@@ -140,6 +140,15 @@
     main .payment .payment_block .payment_form .payment_form__right {
         display: none;
     }
+
+
+    main .payment .payment_block .block_info {
+        margin: 0 0 20px 120px;
+    }
+
+    main .payment .payment_block .block_info .info {
+        right: 100px;
+    }
 }
 
 @media only screen and (max-width : 720px){
@@ -251,9 +260,25 @@
     main .substrates .substrate:nth-child(1) p.credit_card {
         top: 35px;
     }
+
+
+
+    main .payment .payment_block .block_info {
+        margin: 0 0 20px 0;
+        left: -100px;
+    }
+
+    main .payment .payment_block .block_info .info {
+        left: 140px;
+    }
 }
 
 @media only screen and (max-width : 500px){
+    main{
+        overflow-x: hidden;
+    }
+
+    
     main .payment .payment_block .progress_bar_block {
         align-items: start;
     }
@@ -282,6 +307,30 @@
     main .payment .payment_block .warning{
         width: calc(100% - 20px);
     }
+
+
+
+    main .payment .payment_block .block_info{
+        left: -80px;
+    }
+
+    main .payment .payment_block .block_info .logo {
+        width: 125px;
+    }
+
+    main .payment .payment_block .block_info .info {
+        width: 180px;
+        height: 90px;
+        left: 125px;
+    }
+
+    main .payment .payment_block .block_info .info p {
+        width: 140px;
+        height: 50px;
+        font-size: 12px;
+        top: 15px;
+        right: 10px;
+    }
 }
 
 @media only screen and (max-width : 400px){
@@ -306,5 +355,47 @@
 
     main .payment .payment_block .warning p{
         font-size: 15px;
+    }
+
+
+
+    main .payment .payment_block .block_info{
+        left: -80px;
+    }
+
+    main .payment .payment_block .block_info .logo {
+        width: 115px;
+    }
+
+    main .payment .payment_block .block_info .info {
+        width: 160px;
+        height: 80px;
+        left: 115px;
+    }
+
+    main .payment .payment_block .block_info .info p {
+        width: 100px;
+        height: 40px;
+        font-size: 11px;
+        top: 15px;
+        right: 20px;
+    }
+}
+
+
+@media only screen and (max-height: 500px) and (max-width: 1100px){
+    main{
+        min-height: 900px;
+    }
+}
+
+@media only screen and (min-height : 800px) and (min-width : 1100px) and (max-width : 1200px){
+    main .payment, main .waiting_requisites{
+        margin-left: 300px;
+    }
+
+
+    main .substrates .substrate:nth-child(1) {
+        top: 20px;
     }
 }

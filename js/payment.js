@@ -19,7 +19,7 @@ let paymentBankCardBlock = `
         <div class="payment_block">
             <div class="progress_bar_block">
                 <p>Время на проведения платежа <span></span></p>
-                <div data-time="90" class="progress_bar" id="progress-bar">
+                <div data-time="5" class="progress_bar" id="progress-bar">
                     <div class="progress_bar__completion"></div>
                 </div>
             </div>

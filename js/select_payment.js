@@ -4,13 +4,13 @@ let payments = document.querySelectorAll(".select_payment .list_payment ul li");
 let hiddenBlock = document.querySelector(".select_payment .hidden_block");
 let hiddenBlockFunActive = false;
 
-let select = document.querySelector(".select");
-let selectHead = select.querySelector(".select__head");
-let selectList = select.querySelector(".select__list");
-let selectStartValue = selectHead.innerHTML;
-let selectChangeFunActive = false;
-let selectFunActive = false;
-let optionClicked = false;
+let select;
+let selectHead;
+let selectList;
+let selectStartValue;
+let selectChangeFunActive;
+let selectFunActive;
+let optionClicked;
 
 let inputUsername = document.querySelector(".additional_text .username input");
 
@@ -42,13 +42,15 @@ payments.forEach(payment => {
             parseInt(window.getComputedStyle(hiddenBlock.querySelector(".donation")).marginBottom) + "px";
 
 
-            select.classList.remove("_active");
-            select.classList.remove("_not_transparent");
-            selectHead.innerText = selectStartValue;
-
-            selectList.querySelectorAll(".select__item").forEach((item) => {
-                item.classList.remove("_active");
-            });
+            if(select){
+                select.classList.remove("_active");
+                select.classList.remove("_not_transparent");
+                selectHead.innerText = selectStartValue;
+    
+                selectList.querySelectorAll(".select__item").forEach((item) => {
+                    item.classList.remove("_active");
+                });
+            }
 
 
             setTimeout(() => {
@@ -57,6 +59,8 @@ payments.forEach(payment => {
         } else{
             hiddenBlock.style.height = hiddenBlock.querySelector(".donation").offsetHeight +
             parseInt(window.getComputedStyle(hiddenBlock.querySelector(".donation")).marginBottom) + "px";
+
+            buttonPay.classList.add("_active");
         }
 
         if(!hiddenBlockFunActive){
@@ -81,6 +85,15 @@ function hiddenBlockActive(){
     hiddenBlockFunActive = true;
 
     if(hiddenBlock.querySelector(".additional_text")){
+        select = document.querySelector(".select");
+        selectHead = select.querySelector(".select__head");
+        selectList = select.querySelector(".select__list");
+        selectStartValue = selectHead.innerHTML;
+        selectChangeFunActive = false;
+        selectFunActive = false;
+        optionClicked = false;
+
+
         select.addEventListener("touchstart", (e) => selectEvent(e));
         select.addEventListener("click", (e) => selectEvent(e));
 
