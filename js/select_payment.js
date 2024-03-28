@@ -5,10 +5,11 @@ let hiddenBlock = document.querySelector(".select_payment .hidden_block");
 let hiddenBlockFunActive = false;
 
 let select = document.querySelector(".select");
-let selectStartValue = select.querySelector("select option[selected]").innerHTML;
-select.querySelector("select option[selected]").classList.add("none")
+let selectHead = select.querySelector(".select__head");
+let selectList = select.querySelector(".select__list");
+let selectStartValue = selectHead.innerHTML;
+let selectChangeFunActive = false;
 let selectFunActive = false;
-let selectFunClickActive = false;
 let optionClicked = false;
 
 let inputUsername = document.querySelector(".additional_text .username input");
@@ -40,9 +41,19 @@ payments.forEach(payment => {
             hiddenBlock.querySelector(".donation").offsetHeight +
             parseInt(window.getComputedStyle(hiddenBlock.querySelector(".donation")).marginBottom) + "px";
 
+
+            select.classList.remove("_active");
             select.classList.remove("_not_transparent");
-            select.querySelector("select").classList.remove("_active");
-            select.querySelector("select").value = selectStartValue;
+            selectHead.innerText = selectStartValue;
+
+            selectList.querySelectorAll(".select__item").forEach((item) => {
+                item.classList.remove("_active");
+            });
+
+
+            setTimeout(() => {
+                hiddenBlock.style.overflow = "visible";
+            }, 200);
         } else{
             hiddenBlock.style.height = hiddenBlock.querySelector(".donation").offsetHeight +
             parseInt(window.getComputedStyle(hiddenBlock.querySelector(".donation")).marginBottom) + "px";
@@ -70,55 +81,17 @@ function hiddenBlockActive(){
     hiddenBlockFunActive = true;
 
     if(hiddenBlock.querySelector(".additional_text")){
-        select.querySelector("select").addEventListener("click", (e) => {
-            select.querySelector("select").value = "1";
-        });
-        
-        select.addEventListener("click", (e) => {
-            let options = select.querySelectorAll("select option:not([selected])");
-        
-            if(!select.querySelector("select").classList.contains("_active")){
-                select.classList.add("_not_transparent");
-                select.querySelector("select").classList.add("_active");
+        select.addEventListener("touchstart", (e) => selectEvent(e));
+        select.addEventListener("click", (e) => selectEvent(e));
 
-                optionClicked = false;
-            } else{
-                options.forEach((option) => {
-                    if (option === e.target) {
-                        optionClicked = true;
-
-                        inputAmountDonation.querySelector(".input").innerHTML = option.innerHTML;
-                        inputAmountDonation.querySelector(".input").classList.add("_active");
-                    }
-                });
-        
-                if (!optionClicked) {
-                    select.querySelector("select").classList.remove("_active");
-                    select.classList.remove("_not_transparent");
-                }
+        selectEvent = (e) => {
+            if (e.type == "touchstart"){
+                selectChangeFunActive = true;
+                selectChange(e);
+            } else if (e.type == "click" && !selectChangeFunActive){
+                selectChange(e);
             }
-
-            if(select.classList.contains("_rotate")){
-                select.classList.remove("_rotate");
-            } else{
-                select.classList.add("_rotate");
-            }
-        
-            if(!selectFunActive){
-                selectCheckActive();
-                selectFunActive = true;
-            }
-
-            formHiddenBlockCheck();
-        });
-
-        // select.addEventListener("click", (e) => {
-        //     console.log("1")
-        // })
-
-        // select.addEventListener("to", (e) => {
-        //     console.log("1")
-        // })
+        };
     
     
         if (inputUsername.value.trim() != "") {
@@ -136,24 +109,68 @@ function hiddenBlockActive(){
     }
 }
 
-function selectCheckActive(){
-    window.addEventListener("click", (e) => {
-        if(
-            !optionClicked && e.target != select.querySelector("select") 
-            && select.querySelector("select").classList.contains("_active")
-        ){
-            select.querySelector("select").classList.remove("_active");
+function selectChange(e){
+    if(e.target.classList.contains("select__item")){
+        selectList.querySelectorAll(".select__item").forEach((item) => {
+            item.classList.remove("_active");
+        });
+
+        optionClicked = true;
+        e.target.classList.add("_active");
+
+        selectHead.innerText = e.target.innerText; 
+
+        inputAmountDonation.querySelector(".input").innerHTML = e.target.innerHTML;
+        inputAmountDonation.querySelector(".input").classList.add("_active");
+    }
+
+
+    if(!select.classList.contains("_active")){
+        select.classList.add("_not_transparent");
+        select.classList.add("_active");
+
+        optionClicked = false;
+    } else{
+        if (!optionClicked) {
+            select.classList.remove("_active");
             select.classList.remove("_not_transparent");
         }
+    }
 
-        if(e.target != select.querySelector("select") && select.classList.contains("_rotate")){
+
+    if(selectList.classList.contains("none")){
+        selectList.classList.remove("none");
+        select.classList.add("_rotate");
+    } else{
+        selectList.classList.add("none");
+        select.classList.remove("_rotate");
+    }
+
+    if(!selectFunActive){
+        selectCheckActive();
+        selectFunActive = true;
+    }
+
+    formHiddenBlockCheck();
+}
+
+function selectCheckActive(){
+    window.addEventListener("click", (e) => {
+        if(!optionClicked && e.target != select && select.classList.contains("_active")){
+            select.classList.remove("_active");
+            select.classList.remove("_not_transparent");
+            selectList.classList.add("none");
+        }
+
+        if(e.target != select && select.classList.contains("_rotate")){
             select.classList.remove("_rotate");
+            selectList.classList.add("none");
         }
     });
 }
 
 function formHiddenBlockCheck(){
-    if(select.querySelector("select").value != selectStartValue && inputUsername.value != ""){
+    if(selectHead.innerText != selectStartValue && inputUsername.value != ""){
         buttonPay.classList.add("_active");
     } else{
         buttonPay.classList.remove("_active")
@@ -169,7 +186,7 @@ function buttonPayActive(){
         let paymentAmount = document.querySelector("#input-amount").innerHTML;
         if(
             buttonPay.classList.contains("_active") && paymentAmount != "" && inputUsername.value != "" &&
-            select.querySelector("select").value != selectStartValue
+            selectHead.innerText != selectStartValue
         ){
             let paymentMethod;
             payments.forEach(payment => {
